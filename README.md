@@ -2,22 +2,25 @@
 Cloud Native Application Architectures with Spring and Cloud Foundry
 
 ## Instructors
-- Chris Busch, Sr. Platform Architect, cbusch@pivotal.io
-- Sharath Sahadeven, Sr. Platform Architect, ssahadevan@pivotal.io
-- Brian Jimerson, Advisory Platform Architect, bjimerson@pivotal.io
+- Chris Busch, Platform Architect, cbusch@pivotal.io
+- Ming Ling, Platform Architect, mling@pivotal.io
+- Navjot Sadoo, Platform Architect, nsadoo@pivotal.io
+- Steve Womack, Platform Architect, swomack@pivotal.io
 
 ## Agenda
 
 Time | Session
 ---- | -------
-9:00 AM - 10:30 AM | Session 1: _Intro to Pivotal Cloud Foundry_
-10:30 AM - 11:00 AM | _Morning Break_
-11:00 AM - 11:30 AM | Session 2: _Custom Buildpacks_
-11:30 AM - 12:30 PM | Session 3: _Spring Data on Cloud Foundry_
-12:30 PM - 1:30 PM | _Lunch with special speaker_
-1:30 PM - 2:00 PM | Session 4: _Spring Boot Actuator_
-2:00 PM - 4:00 PM | Session 5: _Spring Cloud Services on Cloud Foundry_
-4:00 PM - 5:00 PM | _Networking with food and drinks_
+8:30 AM - 9:00 AM | Breakfast and networking
+9:00 AM - 10:30 AM | Session 1: _Cloud Native Architectures & Frameworks (w/Labs)_
+10:30 AM - 10:45 AM | _Morning Break_
+10:45 AM - 11:15 AM | Session 2: _Custom Buildpacks_
+11:15 AM - 12:15 PM | Session 3: _Spring Data on Cloud Foundry (w/Labs)_
+12:15 PM - 1:00 PM | _Lunch with guest speaker_
+1:00 PM - 1:30 PM | Session 4: _Spring Boot Actuator (w/Lab)_
+1:30 PM - 3:30 PM | Session 5: _Spring Cloud Services on Cloud Foundry (w/Labs)_
+3:30 PM - 4:30 PM | Session 6: _SSO and Route Services with Apigee_
+4:30 PM - 5:00 PM | _Wrap-up and Q&A_
 
 This is a _loose_ schedule for the day. We will adjust as necessary based on our pace through the material.
 
@@ -44,7 +47,7 @@ $ git fetch --all
 
 ## Course Materials
 
-#### Session 1 [(Slides)](session_01/Session_01.pdf): _Intro to Pivotal Cloud Foundry_
+#### Session 1 [(Slides)](session_01/Session_01.pdf): _Cloud Native Architectures & Frameworks_
   - [Lab 1 - From Zero to Pushing Your First Application](session_01/lab_01/lab_01.adoc)
   - [Lab 2 - Binding to Cloud Foundry Services](session_01/lab_02/lab_02.adoc)
   - [Lab 3 - Scaling Applications](session_01/lab_03/lab_03.adoc)
@@ -56,11 +59,14 @@ $ git fetch --all
   - [Lab 5 - Build a Hypermedia-Driven RESTful Web Service with Spring Data REST](session_03/lab_05/lab_05.adoc)
   - [Lab 6 - Leveraging Spring Cloud Connectors for Service Binding](session_03/lab_06/lab_06.adoc)
 
-#### **Session 4** [(Slides)](session_04/Session_04.pdf): _Spring Boot Actuator_
+#### Session 4 [(Slides)](session_04/Session_04.pdf): _Spring Boot Actuator_
   - [Lab 7 - Introspection, Monitoring, and Metrics using Spring Boot Actuator](session_04/lab_07/lab_07.adoc)
 
-#### **Session 5** [(Slides)](session_05/Session_05.pdf): _Spring Cloud Services on Cloud Foundry_
+#### Session 5 [(Slides)](session_05/Session_05.pdf): _Spring Cloud Services on Cloud Foundry_
   - [Lab 8 - Binding Spring Cloud Services](session_05/lab_08/lab_08.adoc)
   - [Lab 9 - Service Registry](session_05/lab_09/lab_09.adoc)
   - [Lab 10 - Config Server](session_05/lab_10/lab_10.adoc)
   - [Lab 11 - Circuit Breaker Dashboard](session_05/lab_11/lab_11.adoc)
+
+#### Session 6 [(Slides)](session_06/Session_06.pdf): _SSO and Route Services with Apigee_
+
