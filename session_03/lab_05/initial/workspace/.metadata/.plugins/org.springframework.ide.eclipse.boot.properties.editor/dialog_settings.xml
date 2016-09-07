@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.jdt.internal.ui.propertiesfileeditor.PropertiesFileSourceViewerConfiguration">
+		<item value="352" key="size.y"/>
+		<item value="588" key="size.x"/>
+	</section>
+	<section name="org.springframework.ide.eclipse.boot.properties.editor.yaml.SpringYeditSourceViewerConfiguration">
+		<item value="352" key="size.y"/>
+		<item value="588" key="size.x"/>
+	</section>
+</section>

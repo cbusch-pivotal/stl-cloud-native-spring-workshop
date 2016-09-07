@@ -1,0 +1,4 @@
+io/pivotal/helloui/controller/SayHelloCommand.class
+io/pivotal/helloui/domain/HelloResponse.class
+io/pivotal/helloui/HelloUiApplication.class
+io/pivotal/helloui/controller/HelloUiController.class

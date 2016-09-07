@@ -1,0 +1,12 @@
+:compat-mode:
+= Lab 9 - Exploring the Service Registry
+
+. Open the Application Manager console in your browser.  Go to the org and space where you created the service instances and scroll down until you see the entry for the Service Registry.
++
+image::../../Common/images/lab9screenshot1.png[]
+
+. Click the "Manage" link under the service registry. Notice that both the server and UI apps have registered themselves. Explore the dashboard.
++
+image::../../Common/images/lab9screenshot2.png[]
+
+link:/README.md#course-materials[Course Materials home] | link:/session_05/lab_10/lab_10.adoc[Lab 10 - Config Server]

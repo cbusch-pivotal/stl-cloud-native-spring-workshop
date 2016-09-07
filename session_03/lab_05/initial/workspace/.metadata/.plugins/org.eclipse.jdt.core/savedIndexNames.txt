@@ -1,0 +1,1 @@
+INDEX VERSION 1.127+/Users/cbusch/git/SpringCloudWorkshop/session_03/lab_05/initial/workspace/.metadata/.plugins/org.eclipse.jdt.core

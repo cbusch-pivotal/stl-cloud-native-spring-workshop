@@ -1,0 +1,27 @@
+:compat-mode:
+= Lab 11 - The Circuit Breaker Dashboard
+
+== Use the Circuit Breaker Dashboard
+
+. Open the Application Manager console in your browser.  Go to the org and space where you created the service instances and scroll down until you see the entry for the Circuit Breaker
++
+image::../../Common/images/lab9screenshot1.png[]
++
+. Click the "Manage" link under the Circuit Breaker. 
+
+. Open the Hello-UI and add some text in the textbox.  You should see the execution counts change.
++
+image::../../Common/images/lab11screenshot1.png[]
+
+== Bonus
+. Go to the Application Manager console and stop the Hello Server.
+
+. Go to the Hello UI and enter some text for the Hello World Service.
+
+. The Circuit Breaker Dashboard should show the Circuit Breaker has changed to "Open" and the error count is increasing.
+
+. Start the Hello Server back up again.
+
+. Go back to the Hello UI and see the service eventually comes back up again.
+
+link:/README.md#course-materials[Course Materials home]

@@ -1,0 +1,114 @@
+:compat-mode:
+= Lab 10 - Using the Config Server
+== Create a GitHub repository to Store Configuration
+
+. Change to the lab directory:
++
+----
+$ cd $COURSE_HOME/session_05/lab_10/
+----
+
+. Create a directory for the configuration repo:
++
+----
+$ mkdir config-repo && cd config-repo
+----
+
+. Initialize the Git repository:
++
+----
+$ git init
+----
+
+. In the repo, create the file `application.yml`, and into that file paste the following:
++
+----
+greeting: Howdy %s!
+
+security:
+  basic:
+    enabled: false
+
+management:
+  security:
+    enabled: false
+    
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${server.port:8080}}
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.service-registry.credentials.uri:http://127.0.0.1:8761}/eureka/
+
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]}
+    nonSecurePort: 80
+----
+
+. Stage your changes and commit them:
++
+----
+git add . && git commit -m "initial commit"
+----
+
+. Make sure you're logged in to your GitHub account, and create a new repository:
++
+image::../../Common/images/github_1.png[]
+
+. Give the repo a name and description, and then click ``Create repository'':
++
+image::../../Common/images/github_2.png[]
+
+. Paste the commands from ``...push an existing repository...'' to the command prompt and execute them:
++
+image::../../Common/images/github_3.png[]
++
+----
+$ git remote add origin https://github.com/mstine/springbox-config-repo.git
+$ git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 229 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/mstine/springbox-config-repo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+----
+
+. Refresh the browser to see your pushed changes:
++
+image::../../Common/images/lab10screenshot1.png[]
+
+== Point Config Server To Your Repository
+
+. Open the Application Manager console in your browser.  Go to the org and space where you created the service instances and scroll down until you see the entry for the Config Server.
++
+image::../../Common/images/lab9screenshot1.png[]
++
+. Click the "Manage" link under the config server.  
+
+. Click the "Git" radio button and enter your config repo as the "Git URI". *NOTE*: If you copy the Git link, remove the `.git` suffix.
++
+image::../../Common/images/lab10screenshot2.png[]
++
+. Click "Submit".
+
+. Tell the *Hello Server* app to refresh it's configuration by sending a POST to the "refresh" endpoint.
++
+----
+    curl -X POST --insecure https://<Your Hello Server URL>/refresh
+
+ For instance:
+
+    curl -X POST --insecure https://hello-server-unstipulated-enrober.pcf3.cloud.fe.pivotal.io/refresh
+----
+. Visit the Fortune UI once again and see your configuration value on the page.
++
+image::../../Common/images/lab10screenshot3.png[]
+
+link:/README.md#course-materials[Course Materials home] | link:/session_05/lab_11/lab_11.adoc[Lab 11 - Circuit Breaker Dashboard]

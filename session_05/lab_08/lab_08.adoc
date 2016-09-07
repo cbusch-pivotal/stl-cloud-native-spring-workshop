@@ -1,0 +1,347 @@
+:compat-mode:
+= Lab 8 - Binding to Spring Cloud Services
+
+[abstract]
+--
+
+--
+== Using Pivotal's PCF3 cloud foundry instance
+. If you were using http://run.pivotal.io (Pivotal Web Services (PWS) public cloud) in prior labs, then you will need to switch to a PCF instance with the Spring Cloud Services (Config Server, Service Registry, and Circuit Breaker) installed. 
+
+. PCF3 does have these service available for use in this workshop. Labs 8 - 11 require Spring Cloud Services. In the PCF3 environment, several studentX accounts are available for use. Please see the instructor for your student number assignment before continuing.
+
+. From a command prompt, set the API target for the CLI:
++
+----
+$ cf api --skip-ssl-validation https://api.pcf3.cloud.fe.pivotal.io
+----
+
+. Login to Pivotal Cloud Foundry (use information from your instructor to log on to Pivotal Cloud Foundry):
++
+----
+$ cf login -u student<assigned number> -p password
+----
++
+Follow the prompts, choosing default organization and space.
+
+
+
+== Creating Service Instances for Hello World Spring Cloud Services Demo Application
+> Each of these services takes a few minutes to initialize while creating application instances and other resources to support them. With many students performing the same actions on PCF3 at the same time, please be patient while initialization completes.
+
+. Create the services the demo application depends on, first start with an instance of the config service.
++
+----
+$cf create-service p-config-server standard config-server
+Creating service instance config-server in org student20-org / space development as student20...
+OK
+----
+
+. Now, we need an instance of the service registry service.
++
+----
+$cf create-service p-service-registry standard service-registry
+Creating service instance service-registry in org student20-org / space development as student20...
+OK
+----
+
+. The final service that we need is for the circuit breaker dashboard.
++
+----
+$cf create-service p-circuit-breaker-dashboard standard circuit-breaker
+Creating service instance circuit-breaker in org student20-org / space development as student20...
+OK
+----
++
+. First we need to configure the config server. Open the Application Manager console and scroll down until you see the Spring Cloud services.  Under the "config-server", click "Manage".
++
+image::../../Common/images/lab8screenshot1.png[]
++
+. You should see a blank page for the Config Server.
++
+image::../../Common/images/lab8screenshot2.png[]
++
+. Later you will set up your own configuration repository in Github.  For now, enter "https://github.com/bboe-pivotal/hello-world-config-repo". Click Submit when ready.
++
+image::../../Common/images/lab8screenshot3.png[]
+
+== Build and Push the applications
+
+. Change to the directory that contains hello-ui and hello-server components.
++
+----
+$ cd $COURSE_HOME/session_05/lab_08/hello-world
+----
+
+. Open the manifest.yml file.  Notice the application names and the service bindings.
++
+----
+---
+memory: 1GB
+instances: 1
+applications:
+- name: hello-server
+  host: hello-server-${random-word}
+  path: hello-server/target/hello-server-0.0.1-SNAPSHOT.jar
+  services:
+  - service-registry
+  - config-server
+- name: hello-ui
+  host: hello-ui-${random-word}
+  path: hello-ui/target/hello-ui-0.0.1-SNAPSHOT.jar
+  services:
+  - service-registry
+  - config-server
+  - circuit-breaker
+----
+
+.  Build the applications
++
+----
+$./mvnw package
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO]
+[INFO] hello-server
+[INFO] hello-ui
+[INFO] Hello World Cloud Native Demo!
+
+...
+
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Hello World Cloud Native Demo! 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO]
+[INFO] hello-server ....................................... SUCCESS [  5.342 s]
+[INFO] hello-ui ........................................... SUCCESS [  5.206 s]
+[INFO] Hello World Cloud Native Demo! ..................... SUCCESS [  0.001 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 10.940 s
+[INFO] Finished at: 2015-12-09T00:20:31-05:00
+[INFO] Final Memory: 49M/418M
+[INFO] ------------------------------------------------------------------------
+----
+.  Push the applications and tell Cloud Foundry not to start the applications quite yet
++
+----
+$cf push --no-start
+Using manifest file /Users/cbusch/git/SpringCloudWorkshop/session_05/lab_08/hello-world/manifest.yml
+
+Creating app hello-server in org instructor-org / space development as instructor...
+OK
+
+Creating route hello-server-unstipulated-enrober.pcf3.cloud.fe.pivotal.io...
+OK
+
+Binding hello-server-unstipulated-enrober.pcf3.cloud.fe.pivotal.io to hello-server...
+OK
+
+Uploading hello-server...
+Uploading app files from: /Users/cbusch/git/SpringCloudWorkshop/session_05/lab_08/hello-world/hello-server/target/hello-server-0.0.1-SNAPSHOT.jar
+Uploading 1M, 116 files
+Done uploading
+OK
+Binding service service-registry to app hello-server in org instructor-org / space development as instructor...
+OK
+Binding service config-server to app hello-server in org instructor-org / space development as instructor...
+OK
+
+Creating app hello-ui in org instructor-org / space development as instructor...
+OK
+
+Creating route hello-ui-unsubscribed-teacake.pcf3.cloud.fe.pivotal.io...
+OK
+
+Binding hello-ui-unsubscribed-teacake.pcf3.cloud.fe.pivotal.io to hello-ui...
+OK
+
+Uploading hello-ui...
+Uploading app files from: /Users/cbusch/git/SpringCloudWorkshop/session_05/lab_08/hello-world/hello-ui/target/hello-ui-0.0.1-SNAPSHOT.jar
+Uploading 1.2M, 130 files
+Done uploading
+OK
+Binding service service-registry to app hello-ui in org instructor-org / space development as instructor...
+OK
+Binding service config-server to app hello-ui in org instructor-org / space development as instructor...
+OK
+Binding service circuit-breaker to app hello-ui in org instructor-org / space development as instructor...
+OK
+----
+
+.  Spring Cloud Services uses HTTPS for all client-to-service communication. If your Pivotal Cloud Foundry installation is using a self-signed SSL certificate, the certificate will need to be added to the JVM truststore before your client application can use a Service Registry service instance to discover a service application. Start by taking note of the Cloud Foundry API endpoint of your environment.
++
+----
+$cf api
+API endpoint: https://api.pcf3.cloud.fe.pivotal.io (API version: 2.43.0)
+----
+
+. Enable Spring Cloud Services to add the certificate automatically by setting the CF_TARGET environment variable on the hello-server and hello-ui applications to the API endpoint of your Elastic Runtime instance. First do this for the hello-server application.
++
+----
+$cf set-env hello-server CF_TARGET https://api.pcf3.cloud.fe.pivotal.io
+Setting env variable 'CF_TARGET' to 'https://api.pcf3.cloud.fe.pivotal.io' for app hello-server in org instructor-org / space development as instructor...
+OK
+TIP: Use 'cf restage' to ensure your env variable changes take effect
+----
+
+. Then repeat for the hello-ui application
++
+----
+$cf set-env hello-ui CF_TARGET https://api.pcf3.cloud.fe.pivotal.io
+Setting env variable 'CF_TARGET' to 'https://api.pcf3.cloud.fe.pivotal.io' for app hello-ui in org instructor-org / space development as instructor...
+OK
+TIP: Use 'cf restage' to ensure your env variable changes take effect
+----
+
+. Now the applications are ready to run. First start the hello-server application.
++
+----
+$cf start hello-server
+Starting app hello-server in org instructor-org / space development as instructor...
+Creating container
+Successfully created container
+Downloading app package...
+Downloaded app package (24M)
+No buildpack specified; fetching standard buildpacks to detect and build your application.
+Downloading buildpacks (staticfile_buildpack, java_buildpack_offline, ruby_buildpack, nodejs_buildpack, go_buildpack, python_buildpack, php_buildpack, binary_buildpack)...
+Downloading staticfile_buildpack...
+Downloading java_buildpack_offline...
+Downloading python_buildpack...
+Downloading ruby_buildpack...
+Downloaded staticfile_buildpack
+Downloading nodejs_buildpack...
+Downloading go_buildpack...
+Downloaded nodejs_buildpack
+Downloading binary_buildpack...
+Downloaded binary_buildpack
+Downloading php_buildpack...
+Downloaded java_buildpack_offline
+Downloaded python_buildpack
+Downloaded ruby_buildpack
+Downloaded php_buildpack
+Downloaded go_buildpack
+Downloaded buildpacks
+Staging...
+-----> Java Buildpack Version: v3.3.1 (offline) | https://github.com/cloudfoundry/java-buildpack.git#063836b
+-----> Downloading Open Jdk JRE 1.8.0_65 from https://download.run.pivotal.io/openjdk/trusty/x86_64/openjdk-1.8.0_65.tar.gz (found in cache)
+       Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre (1.4s)
+-----> Downloading Open JDK Like Memory Calculator 2.0.0_RELEASE from https://download.run.pivotal.io/memory-calculator/trusty/x86_64/memory-calculator-2.0.0_RELEASE.tar.gz (found in cache)
+       Memory Settings: -Xss1M -Xmx768M -XX:MaxMetaspaceSize=104857K -Xms768M -XX:MetaspaceSize=104857K
+-----> Downloading Spring Auto Reconfiguration 1.10.0_RELEASE from https://download.run.pivotal.io/auto-reconfiguration/auto-reconfiguration-1.10.0_RELEASE.jar (found in cache)
+Exit status 0
+Staging complete
+Uploading droplet, build artifacts cache...
+Uploading droplet...
+Uploading build artifacts cache...
+Uploaded build artifacts cache (109B)
+Uploaded droplet (68.7M)
+Uploading complete
+
+0 of 1 instances running, 1 starting
+0 of 1 instances running, 1 starting
+1 of 1 instances running
+
+App started
+
+
+OK
+
+App hello-server was started using this command `CALCULATED_MEMORY=$($PWD/.java-buildpack/open_jdk_jre/bin/java-buildpack-memory-calculator-2.0.0_RELEASE -memorySizes=metaspace:64m.. -memoryWeights=heap:75,metaspace:10,native:10,stack:5 -memoryInitials=heap:100%,metaspace:100% -totMemory=$MEMORY_LIMIT) && SERVER_PORT=$PORT $PWD/.java-buildpack/open_jdk_jre/bin/java -cp $PWD/.:$PWD/.java-buildpack/spring_auto_reconfiguration/spring_auto_reconfiguration-1.10.0_RELEASE.jar -Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh $CALCULATED_MEMORY org.springframework.boot.loader.JarLauncher`
+
+Showing health and status for app hello-server in org instructor-org / space development as instructor...
+OK
+
+requested state: started
+instances: 1/1
+usage: 1G x 1 instances
+urls: hello-server-unstipulated-enrober.pcf3.cloud.fe.pivotal.io
+last uploaded: Wed Dec 9 15:47:21 UTC 2015
+stack: cflinuxfs2
+buildpack: java-buildpack=v3.3.1-offline-https://github.com/cloudfoundry/java-buildpack.git#063836b java-main open-jdk-like-jre=1.8.0_65 open-jdk-like-memory-calculator=2.0.0_RELEASE spring-auto-reconfiguration=1.10.0_RELEASE
+
+     state     since                    cpu    memory       disk           details
+#0   running   2015-12-09 09:51:48 AM   0.0%   369M of 1G   176.5M of 1G
+----
+. Start the hello-ui application.
+
++
+----
+$cf start hello-ui
+Starting app hello-ui in org instructor-org / space development as instructor...
+Creating container
+Successfully created container
+Downloading app package...
+Downloaded app package (36.5M)
+No buildpack specified; fetching standard buildpacks to detect and build your application.
+Downloading buildpacks (staticfile_buildpack, java_buildpack_offline, ruby_buildpack, nodejs_buildpack, go_buildpack, python_buildpack, php_buildpack, binary_buildpack)...
+Downloading nodejs_buildpack...
+Downloading go_buildpack...
+Downloading staticfile_buildpack...
+Downloading python_buildpack...
+Downloaded staticfile_buildpack
+Downloading java_buildpack_offline...
+Downloading ruby_buildpack...
+Downloaded nodejs_buildpack
+Downloading php_buildpack...
+Downloaded java_buildpack_offline
+Downloading binary_buildpack...
+Downloaded binary_buildpack
+Downloaded php_buildpack
+Downloaded python_buildpack
+Downloaded ruby_buildpack
+Downloaded go_buildpack
+Downloaded buildpacks
+Staging...
+-----> Java Buildpack Version: v3.3.1 (offline) | https://github.com/cloudfoundry/java-buildpack.git#063836b
+-----> Downloading Open Jdk JRE 1.8.0_65 from https://download.run.pivotal.io/openjdk/trusty/x86_64/openjdk-1.8.0_65.tar.gz (found in cache)
+       Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre (1.4s)
+-----> Downloading Open JDK Like Memory Calculator 2.0.0_RELEASE from https://download.run.pivotal.io/memory-calculator/trusty/x86_64/memory-calculator-2.0.0_RELEASE.tar.gz (found in cache)
+       Memory Settings: -XX:MetaspaceSize=104857K -Xmx768M -XX:MaxMetaspaceSize=104857K -Xss1M -Xms768M
+-----> Downloading Spring Auto Reconfiguration 1.10.0_RELEASE from https://download.run.pivotal.io/auto-reconfiguration/auto-reconfiguration-1.10.0_RELEASE.jar (found in cache)
+Exit status 0
+Staging complete
+Uploading droplet, build artifacts cache...
+Uploading droplet...
+Uploading build artifacts cache...
+Uploaded build artifacts cache (109B)
+Uploaded droplet (81.3M)
+Uploading complete
+
+0 of 1 instances running, 1 starting
+0 of 1 instances running, 1 starting
+0 of 1 instances running, 1 starting
+0 of 1 instances running, 1 starting
+1 of 1 instances running
+
+App started
+
+
+OK
+
+App hello-ui was started using this command `CALCULATED_MEMORY=$($PWD/.java-buildpack/open_jdk_jre/bin/java-buildpack-memory-calculator-2.0.0_RELEASE -memorySizes=metaspace:64m.. -memoryWeights=heap:75,metaspace:10,native:10,stack:5 -memoryInitials=heap:100%,metaspace:100% -totMemory=$MEMORY_LIMIT) && SERVER_PORT=$PORT $PWD/.java-buildpack/open_jdk_jre/bin/java -cp $PWD/.:$PWD/.java-buildpack/spring_auto_reconfiguration/spring_auto_reconfiguration-1.10.0_RELEASE.jar -Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh $CALCULATED_MEMORY org.springframework.boot.loader.JarLauncher`
+
+Showing health and status for app hello-ui in org instructor-org / space development as instructor...
+OK
+
+requested state: started
+instances: 1/1
+usage: 1G x 1 instances
+urls: hello-ui-unsubscribed-teacake.pcf3.cloud.fe.pivotal.io
+last uploaded: Wed Dec 9 15:47:34 UTC 2015
+stack: cflinuxfs2
+buildpack: java-buildpack=v3.3.1-offline-https://github.com/cloudfoundry/java-buildpack.git#063836b java-main open-jdk-like-jre=1.8.0_65 open-jdk-like-memory-calculator=2.0.0_RELEASE spring-auto-reconfiguration=1.10.0_RELEASE
+
+     state     since                    cpu    memory         disk           details
+#0   running   2015-12-09 09:54:07 AM   0.0%   181.7M of 1G   190.8M of 1G
+----
+
+. Verify that the applications visiting the URL for the hello-ui application and testing it out.
+
+image::/../../Common/images/lab8screenshot4.png[]
+
+link:/README.md#course-materials[Course Materials home] | link:/session_05/lab_09/lab_09.adoc[Lab 9 - Service Registry]
