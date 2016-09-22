@@ -1,7 +1,7 @@
 # Cloud Native Workshop
 Cloud Native Application development with Spring and Cloud Foundry. Join Pivotal and Perficient for a full-day hands-on workshop to introduce key concepts in modern cloud native application development and delivery. This workshop will introduce concepts of cloud-native and Spring application development along with Pivotal Cloud Foundry.  The labs will leverage Spring Boot and Actuator, Spring Data, and other Spring projects. 
 
-Registration link <tbd>
+[Registration link](https://pivotal.io/event/cloud-native-workshop/stl)
 
 ## Agenda
 
