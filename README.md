@@ -8,13 +8,13 @@ Cloud Native Application development with Spring and Cloud Foundry. Join Pivotal
 Time | Session
 ---- | -------
 8:30 AM - 9:00 AM | _Registration and Breakfast_
-9:00 AM - 9:30 AM | _Cloud Native Architectures & Frameworks_
-9:30 AM - 11:30 AM | _Pivotal Cloud Foundry Overview with Labs*_
-11:30 AM - 12:00 PM | _Spring Boot and Actuator with Labs*_
-12:00 PM - 1:00 PM | _Working Lunch with Guest Speaker from Perficient_
-1:00 PM - 2:00 PM | _Spring Data on Cloud Foundry with Labs*_
-2:00 PM - 3:00 PM | _Spring Cloud Services on Cloud Foundry with Labs*_
-3:00 PM - 4:00 PM | _Route Services with Apigee with Labs*_
+9:00 AM - 9:30 AM | _Cloud Native Architectures & Frameworks_ (Steve)
+9:30 AM - 11:30 AM | _Pivotal Cloud Foundry Overview with Labs*_ (Chris)
+11:30 AM - 12:00 PM | _Spring Boot and Actuator with Labs*_ (Sharath / Chris?)
+12:00 PM - 1:00 PM | _Working Lunch with Guest Speaker from Perficient_ (Dave)
+1:00 PM - 2:00 PM | _Spring Data on Cloud Foundry with Labs*_ (Steve)
+2:00 PM - 3:00 PM | _Spring Cloud Services on Cloud Foundry with Labs*_ (Sharath / Navjot / Steve?)
+3:00 PM - 4:00 PM | _Route Services with Apigee with Labs*_ (Navjot)
 4:00 PM - 4:30 PM | _Wrap-up and Q&A_
 
 This is a _loose_ schedule for the day. We will adjust as necessary based on our pace through the material.
@@ -71,4 +71,5 @@ $ git fetch --all
 - Chris Busch, Platform Architect, cbusch@pivotal.io
 - Navjot Sadoo, Platform Architect, nsadoo@pivotal.io
 - Steve Womack, Platform Architect, swomack@pivotal.io
+- Dave Stockmann, Principle Architect, dave.stockmann@perficient.com
 
