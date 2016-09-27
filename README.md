@@ -42,30 +42,30 @@ $ git fetch --all
 
 ## Course Materials
 
-#### _Cloud Native Architectures & Frameworks_ [(Slides)](presentations/Session_01.pdf)
+#### _Session 1: Cloud Native Architectures & Frameworks_ [(Slides)](session_01/Session_01-Cloud_Native_Architectures_and_Frameworks.pptx)
 
-#### _Pivotal Cloud Foundry Overview_ [(Slides)](presentations/Session_02.pdf)
-  - [Lab 1 - From Zero to Pushing Your First Application](labs/lab_01.adoc)
-  - [Lab 2 - Binding to Cloud Foundry Services](labs/lab_02.adoc)
-  - [Lab 3 - Scaling Applications](labs/lab_03.adoc)
-  - [Lab 4 - Monitoring Applications](labs/lab_04.adoc)
+#### _Session 2: Pivotal Cloud Foundry Overview_ [(Slides)](session_02/Session_02-Pivotal_Cloud_Foundry-The_Cloud_Native_Platform.pptx)
+  - [Lab 1 - From Zero to Pushing Your First Application](session_02/lab_01.adoc)
+  - [Lab 2 - Binding to Cloud Foundry Services](session_02/lab_02.adoc)
+  - [Lab 3 - Scaling Applications](session_02/lab_03.adoc)
+  - [Lab 4 - Monitoring Applications](session_02/lab_04.adoc)
 
-#### _Spring Boot and Actuator_ [(Slides)](presentations/Session_03.pdf)
-  - [Lab 5 - Introspection, Monitoring, and Metrics using Spring Boot Actuator](labs/lab_07.adoc)
+#### _Session 3: Spring Boot and Actuator_ [(Slides)](session_03/Session_03-Spring_Boot_and_Actuator.pptx)
+  - [Lab 5 - Introspection, Monitoring, and Metrics using Spring Boot Actuator](session_03/lab_05.adoc)
 
-#### _Spring Data on Cloud Foundry_ [(Slides)](presentations/session_04.pdf)
-  - [Lab 6 - Build a Hypermedia-Driven RESTful Web Service with Spring Data REST](labs/lab_05.adoc)
-  - [Lab 7 - Leveraging Spring Cloud Connectors for Service Binding](labs/lab_06.adoc)
+#### _Session 4: Spring Data on Cloud Foundry_ [(Slides)](session_04/Session_04-Spring_Data.pptx)
+  - [Lab 6 - Build a Hypermedia-Driven RESTful Web Service with Spring Data REST](session_04/lab_06.adoc)
+  - [Lab 7 - Leveraging Spring Cloud Connectors for Service Binding](session_04/lab_07.adoc)
 
-#### _Spring Cloud Services on Cloud Foundry_ [(Slides)](presentations/Session_05.pdf)
-  - [Lab 8 - Binding Spring Cloud Services](labs/lab_08.adoc)
-  - [Lab 9 - Service Registry](labs/lab_09.adoc)
-  - [Lab 10 - Config Server](labs/lab_10.adoc)
-  - [Lab 11 - Circuit Breaker Dashboard](labs/lab_11.adoc)
+#### _Session 5: Spring Cloud Services on Cloud Foundry_ [(Slides)](session_05/Session_05-Spring-Cloud-Services.pptx)
+  - [Lab 8 - Binding Spring Cloud Services](session_05/lab_08.adoc)
+  - [Lab 9 - Service Registry](session_05/lab_09.adoc)
+  - [Lab 10 - Config Server](session_05/lab_10.adoc)
+  - [Lab 11 - Circuit Breaker Dashboard](session_05/lab_11.adoc)
 
-#### _Route Services with Apigee_ [(Slides)](presentations/Session_06.pdf)
-  - [Lab 12 - Route Service creation](labs/lab_12.adoc)
-  - [Lab 13 - Using for Apigee](labs/lab_13.adoc)
+#### _Session 6: Route Services with Apigee_ [(Slides)](session_06/Session_06-Route_Services.pptx)
+  - [Lab 12 - Route Service creation](session_06/lab_12.adoc)
+  - [Lab 13 - Using for Apigee](session_06/lab_13.adoc)
 
 ## Instructors
 - Chris Busch, Platform Architect, cbusch@pivotal.io
