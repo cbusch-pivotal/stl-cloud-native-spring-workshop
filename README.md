@@ -8,14 +8,14 @@ Cloud Native Application development with Spring and Cloud Foundry. Join Pivotal
 Time | Session
 ---- | -------
 8:30 AM - 9:00 AM | _Registration and Breakfast_
-9:00 AM - 9:30 AM | _Cloud Native Architectures & Frameworks_ (Steve)
-9:30 AM - 11:30 AM | _Pivotal Cloud Foundry Overview with Labs*_ (Chris)
-11:30 AM - 12:00 PM | _Spring Boot and Actuator with Labs*_ (Sharath / Chris?)
+9:00 AM - 9:30 AM | _Session 1: Cloud Native Architectures & Frameworks_ (Steve)
+9:30 AM - 11:30 AM | _Session 2: Pivotal Cloud Foundry Overview with Labs*_ (Chris)
+11:30 AM - 12:00 PM | _Session 3: Spring Boot and Actuator with Labs*_ (Sharath)
 12:00 PM - 1:00 PM | _Working Lunch with Guest Speaker from Perficient_ (Dave)
-1:00 PM - 2:00 PM | _Spring Data on Cloud Foundry with Labs*_ (Steve)
-2:00 PM - 3:00 PM | _Spring Cloud Services on Cloud Foundry with Labs*_ (Sharath / Navjot / Steve?)
-3:00 PM - 4:00 PM | _Route Services with Apigee with Labs*_ (Navjot)
-4:00 PM - 4:30 PM | _Wrap-up and Q&A_
+1:00 PM - 2:00 PM | _Session 4: Spring Data on Cloud Foundry with Labs*_ (Steve)
+2:00 PM - 3:00 PM | _Session 5: Spring Cloud Services on Cloud Foundry_ (Navjot)
+3:00 PM - 4:00 PM | _Session 6: Route Services with Apigee with Labs*_ (Navjot)
+4:00 PM - 4:30 PM | _Wrap-up, Q&A, Course evaluation_
 
 This is a _loose_ schedule for the day. We will adjust as necessary based on our pace through the material.
 
@@ -58,6 +58,7 @@ $ git fetch --all
   - [Lab 7 - Leveraging Spring Cloud Connectors for Service Binding](session_04/lab_07.adoc)
 
 #### _Session 5: Spring Cloud Services on Cloud Foundry_ [(Slides)](session_05/Session_05-Spring-Cloud-Services.pptx)
+_Extra credit - labs can be done on your own!_
   - [Lab 8 - Binding Spring Cloud Services](session_05/lab_08.adoc)
   - [Lab 9 - Service Registry](session_05/lab_09.adoc)
   - [Lab 10 - Config Server](session_05/lab_10.adoc)
