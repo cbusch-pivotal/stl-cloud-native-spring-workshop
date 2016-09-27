@@ -1,5 +1,5 @@
 :compat-mode:
-= Lab 5 - Build a Hypermedia-Driven RESTful Web Service with Spring Data REST
+= Lab 6 - Build a Hypermedia-Driven RESTful Web Service with Spring Data REST
 
 In this lab we'll utilize Spring Boot, Spring Data, and Spring Data REST to create a fully-functional hypermedia-driven RESTful web service. We'll then deploy it to Cloud Foundry (using Pivotal Web Services).
 
@@ -419,4 +419,4 @@ urls: cities-undeliverable-iatrochemistry.cf.mycloud.com
 $ curl -i cities-undeliverable-iatrochemistry.cf.mycloud.com/cities
 ----
 
-link:/README.md#course-materials[Course Materials home] | link:/session_03/lab_06/lab_06.adoc[Lab 6 - Leveraging Spring Cloud Connectors for Service Binding]
+link:/README.md#course-materials[Course Materials home] | link:/session_04/lab_07/lab_07.adoc[Lab 7 - Leveraging Spring Cloud Connectors for Service Binding]

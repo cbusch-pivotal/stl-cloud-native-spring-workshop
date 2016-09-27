@@ -150,4 +150,4 @@ Deleting service spring-music-db in org oreilly-class / space instructor as msti
 OK
 ----
 
-link:/README.md#course-materials[Course Materials home] | link:/session_01/lab_03/lab_03.adoc[Lab 3 - Scaling Applications]
+link:/README.md#course-materials[Course Materials home] | link:/session_02/lab_03/lab_03.adoc[Lab 3 - Scaling Applications]

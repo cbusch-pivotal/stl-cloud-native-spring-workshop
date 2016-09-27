@@ -132,4 +132,4 @@ As you can see, we're back down to only one instance running, and it is in fact 
 +
 image::../../Common/images/cf-scale-boot-unscaled.png[]
 
-link:/README.md#course-materials[Course Materials home] | link:/session_01/lab_04/lab_04.adoc[Lab 4 - Monitoring Applications]
+link:/README.md#course-materials[Course Materials home] | link:/session_02/lab_04/lab_04.adoc[Lab 4 - Monitoring Applications]

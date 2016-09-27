@@ -24,4 +24,4 @@ image::../../Common/images/lab11screenshot1.png[]
 
 . Go back to the Hello UI and see the service eventually comes back up again.
 
-link:/README.md#course-materials[Course Materials home]
+link:/README.md#course-materials[Course Materials home] | link:/session_06/lab_12/lab_12.adoc[Lab 12 - Route Service Creation]

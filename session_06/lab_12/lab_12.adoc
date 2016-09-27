@@ -1,0 +1,8 @@
+:compat-mode:
+= Lab 12 - Route Service Creation
+
+== Creating a route service
+
+. Go to...
+
+link:/README.md#course-materials[Course Materials home] | link:/session_06/lab_13/lab_13.adoc[Lab 13 - Using for Apigee]

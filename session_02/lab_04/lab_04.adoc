@@ -317,4 +317,4 @@ Deleting service cf-scale-boot-logs in org oreilly-class / space instructor as m
 OK
 ----
 
-link:/README.md#course-materials[Course Materials home] | link:/session_03/lab_05/lab_05.adoc[Lab 5 - Build a Hypermedia-Driven RESTful Web Service with Spring Data REST]
+link:/README.md#course-materials[Course Materials home] | link:/session_03/lab_05/lab_05.adoc[Lab 5 - Introspection, Monitoring, and Metrics using Spring Boot Actuator]
