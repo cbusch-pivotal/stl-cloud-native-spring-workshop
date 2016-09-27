@@ -69,8 +69,9 @@ _Extra credit - labs can be done on your own!_
   - [Lab 13 - Using for Apigee](session_06/lab_13.adoc)
 
 ## Instructors
-- Chris Busch, Platform Architect, cbusch@pivotal.io
-- Navjot Sadoo, Platform Architect, nsadoo@pivotal.io
-- Steve Womack, Platform Architect, swomack@pivotal.io
-- Dave Stockmann, Principle Architect, dave.stockmann@perficient.com
+- Chris Busch, Pivotal Platform Architect, cbusch@pivotal.io
+- Navjot Sadoo, Pivotal Platform Architect, nsadoo@pivotal.io
+- Sharath Sahadevan, Pivotal Platform Achitect, ssahadevan@pivotal.io
+- Dave Stockmann, Perficient Principle Architect, dave.stockmann@perficient.com
+- Steve Womack, Pivotal Platform Architect, swomack@pivotal.io
 
