@@ -183,4 +183,4 @@ Deleting service cf-scale-boot-logs in org oreilly-class / space instructor as m
 OK
 ----
 
-link:/README.md#course-materials[Course Materials home] | link:/session_05/lab_08/lab_08.adoc[Lab 7 - Binding to Spring Cloud Services]
+link:/README.md#course-materials[Course Materials home] | link:/session_05/lab_08/lab_08.adoc[Lab 8 - Binding to Spring Cloud Services]
