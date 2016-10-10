@@ -64,7 +64,7 @@ _Extra credit - labs can be done on your own!_
   - [Lab 10 - Config Server](session_05/lab_10/lab_10.adoc)
   - [Lab 11 - Circuit Breaker Dashboard](session_05/lab_11/lab_11.adoc)
 
-#### _Session 6: Route Services with Apigee_ [(Slides)](session_06/Session_06-Route_Services.pdf)
+#### _Session 6: Route Services with Apigee_ [(Slides)](session_06/Session_06_Route_Services.pdf)
   - [Lab 12 - Route Service creation](session_06/lab_12/lab_12.adoc)
   - [Lab 13 - Using for Apigee](session_06/lab_13/lab_13.adoc)
 
