@@ -65,12 +65,12 @@ _Extra credit - labs can be done on your own!_
   - [Lab 11 - Circuit Breaker Dashboard](session_05/lab_11/lab_11.adoc)
 
 #### _Session 6: Route Services with Apigee_ [(Slides)](session_06/Session_06_Route_Services.pdf)
-  - [Lab 12 - Route Service creation](session_06/lab_12/lab_12.adoc)
-  - [Lab 13 - Using for Apigee](session_06/lab_13/lab_13.adoc)
+  - [Lab 12 - Apigee DevJam](https://github.com/apigee/DevJam)
+  - [Lab 13 - CF Route Service Examples](https://docs.cloudfoundry.org/services/route-services.html#examples)
 
 ## Instructors
 - Chris Busch, Pivotal Platform Architect, cbusch@pivotal.io
-- Navjot Sadoo, Pivotal Platform Architect, nsadoo@pivotal.io
+- Navjot Sagoo, Pivotal Platform Architect, nsagoo@pivotal.io
 - Sharath Sahadevan, Pivotal Platform Achitect, ssahadevan@pivotal.io
 - Dave Stockmann, Perficient Principle Architect, dave.stockmann@perficient.com
 - Steve Womack, Pivotal Platform Architect, swomack@pivotal.io
