@@ -26,10 +26,10 @@ The overwhelming majority of our time will be spent engaging with the technology
 
 **Prerequisites**
 Start by downloading and installing the appropriate prerequisite tools.
-- [Cloud Foundry CLI](https://goo.gl/M0pH4i)
-- [Apache Maven](http://info.pivotal.io/HI002010A6ZlRJR1NeU00eC), to build labs using Maven
-- [Gradle](https://services.gradle.org/distributions/gradle-3.1-all.zip), to build labs using Gradle
-- [Git Client](https://git-scm.com/downloads), to clone Github repo or download and unzip
+- [Cloud Foundry CLI](https://goo.gl/M0pH4i) to interact with a cloud foundry instance
+- [Apache Maven](http://info.pivotal.io/HI002010A6ZlRJR1NeU00eC) to build labs using Maven
+- [Gradle](https://services.gradle.org/distributions/gradle-3.1-all.zip) to build labs using Gradle
+- [Git Client](https://git-scm.com/downloads) to clone Github repo or download and unzip
 - An IDE, like [Spring Tool Suite](https://spring.io/tools/sts/all) or [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
 - [Java SE Development Kit](http://info.pivotal.io/n0I60i3021AN0JU0le10CRR)
 
