@@ -70,6 +70,8 @@ _Extra credit - labs can be done on your own!_
   - [Lab 12 - Apigee DevJam](https://github.com/apigee/DevJam)
   - [Lab 13 - CF Route Service Examples](https://docs.cloudfoundry.org/services/route-services.html#examples)
 
+#### _Wrap-up, Q&A, Course evaluation_ [(Slides)](session_wrapup/Session_Wrap-up.pptx) [(Evaluation)](http://evaluation.lnk)
+
 ## Instructors
 - Chris Busch, Pivotal Platform Architect, cbusch@pivotal.io
 - Navjot Sagoo, Pivotal Platform Architect, nsagoo@pivotal.io
