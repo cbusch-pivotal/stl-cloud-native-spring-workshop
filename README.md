@@ -17,6 +17,8 @@ Time | Session
 3:00 PM - 4:00 PM | _Session 6: Route Services with Apigee with Labs*_ (Navjot)
 4:00 PM - 4:30 PM | _Wrap-up, Q&A, Course evaluation_
 
+_*See [Course Materials](#course-materials) section below for slides and labs_
+
 This is a _loose_ schedule for the day. We will adjust as necessary based on our pace through the material.
 
 The lectures for this class are intentionally very light and are only intended to set the stage for the hands-on labs.
@@ -25,6 +27,7 @@ The overwhelming majority of our time will be spent engaging with the technology
 ## Getting started
 
 **Prerequisites**
+
 Start by downloading and installing the appropriate prerequisite tools.
 - [Cloud Foundry CLI](https://goo.gl/M0pH4i) to interact with a cloud foundry instance
 - [Apache Maven](http://info.pivotal.io/HI002010A6ZlRJR1NeU00eC) to build labs using Maven
@@ -34,6 +37,7 @@ Start by downloading and installing the appropriate prerequisite tools.
 - [Java SE Development Kit](http://info.pivotal.io/n0I60i3021AN0JU0le10CRR)
 
 **Download materials**
+
 Next, download the course materials.  This can be accomplished either through the GitHub website by downloading a repository zip and unzipping locally, or if you have Git installed, use the following commands:
 
 ```
