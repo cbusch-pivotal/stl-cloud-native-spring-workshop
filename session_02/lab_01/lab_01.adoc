@@ -2,17 +2,17 @@
 
 == Target
 
-. If you haven't already, download the latest release of the Cloud Foundry CLI from https://github.com/cloudfoundry/cli/releases for your operating system and install it.
+. If you haven't already, download the latest release of the link:https://github.com/cloudfoundry/cli#installers-and-compressed-binaries[Cloud Foundry CLI] for your operating system and install it.
 
-. Create a trial http://run.pivotal.io[Pivotal Web Services] account to use Pivotal's web-hosted Cloud Foundry for labs 1 - 7.
+. Multiple Pivotal Cloud Foundry instances are available for use during this workshop, provided by the instructor. Workshop examples will use http://run.pivotal.io[Pivotal Web Services] as the target cloud foundry instance, i.e. api.run.pivotal.io. Create a trial http://run.pivotal.io[Pivotal Web Services] account to use Pivotal's web-hosted Cloud Foundry for labs. Or use the API target and username/password provided by the instructor.
 
 . From a command prompt, set the API target for the CLI:
 +
 ----
-$ cf api --skip-ssl-validation https://run.pivotal.io
+$ cf api --skip-ssl-validation api.run.pivotal.io
 ----
 
-. Login to Pivotal Cloud Foundry (use information from your instructor to log on to Pivotal Cloud Foundry):
+. Login to Pivotal Cloud Foundry (or use information from your instructor to log on to Pivotal Cloud Foundry):
 +
 ----
 $ cf login -u <your e-mail> -p <your pw>
