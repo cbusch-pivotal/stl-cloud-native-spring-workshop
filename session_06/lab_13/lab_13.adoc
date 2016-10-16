@@ -1,5 +1,5 @@
 :compat-mode:
-= Lab 13 - Using for Apigee
+= Lab 13 Apigee Labs
 
 == Creating and Managing API's with Apigee Edge - Labs
 
