@@ -1,5 +1,5 @@
 :compat-mode:
-= Lab 12 - Creating Route Services in Pivotal Cloud Foundry
+= Lab 12 - Route Services Labs
 
 == Route Services with Pivotal Cloud Foundry & Apigee - Labs
 Use the links below to create a route service with Apigee in Pivotal Cloud Foundry.
