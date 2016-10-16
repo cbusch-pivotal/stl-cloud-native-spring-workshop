@@ -71,8 +71,9 @@ _Extra credit - labs can be done on your own!_
   - [Lab 11 - Circuit Breaker Dashboard](session_05/lab_11/lab_11.adoc)
 
 #### _Session 6: Route Services with Apigee_ [(Slides)](session_06/Session_06_Route_Services.pdf)
-  - [Lab 12 - Apigee DevJam](https://github.com/apigee/DevJam)
-  - [Lab 13 - CF Route Service Examples](https://docs.cloudfoundry.org/services/route-services.html#examples)
+  - [Lab 12 - PCF Route Service with Apigee](http://docs.apigee.com/api-services/content/creating-edge-api-proxy-manage-client-calls-your-cloud-foundry-application)
+  - [Lab 13 - Apigee DevJam](https://github.com/apigee/DevJam)
+  - [Lab 14 - CF Route Service Examples](https://docs.cloudfoundry.org/services/route-services.html#examples)
 
 #### _Wrap-up, Q&A, Course evaluation_ [(Slides)](session_wrapup/Session_Wrap-up.pptx) [(Evaluation)](http://evaluation.lnk)
 
