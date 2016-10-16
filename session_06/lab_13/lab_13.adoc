@@ -1,10 +1,10 @@
 :compat-mode:
 = Lab 13 - Using for Apigee
 
-== Example of creating API's in Apigee Edge
+== Creating and Managing API's with Apigee Edge - Labs
 
-Apigee DevJam(https://github.com/apigee/DevJam)
+- [Apigee DevJam](https://github.com/apigee/DevJam)
+- [Apigee Adapt or Die](https://github.com/chrislatimer/adaptordie)
 
-. Go to...
 
 link:/README.md#course-materials[Course Materials home]
