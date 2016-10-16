@@ -1,10 +1,10 @@
 :compat-mode:
 = Lab 12 - Route Service Creation
 
-== Creating a route service
+== Route Services with Pivotal Cloud Foundry & Apigee - Labs
 Use the link below from Apigee Documentation to create a Route Service with Apigee in Pivotal Cloud Foundry.
 
-- http://docs.apigee.com/api-services/content/creating-edge-api-proxy-manage-client-calls-your-cloud-foundry-application[PCF Route Services with Apigee](
+- http://docs.apigee.com/api-services/content/creating-edge-api-proxy-manage-client-calls-your-cloud-foundry-application[PCF Route Services with Apigee]
 - https://docs.cloudfoundry.org/services/route-services.html#examples[Cloud Foundry Custom Route Service Examples]
 
 link:/README.md#course-materials[Course Materials home] | link:/session_06/lab_13/lab_13.adoc[Lab 13 - Using for Apigee]
