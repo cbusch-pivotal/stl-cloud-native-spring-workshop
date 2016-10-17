@@ -12,12 +12,12 @@ Use the following to log into specific environments
 
 ### Parter FNTS PCF environment
 - https://apps.system.pivotal.fnts.com
-- Login with your assigned student --> student1 through student25
+- Login with your assigned student --> `student1` through `student25`
 - User [FNTS/PEZ Marketplace services](#fnts-or-pivotal-haas-environment) below
 
 ### Pivotal Elastic Zone (PEZ) PCF environment
 - https://apps.run.haas-64.pez.pivotal.io
-- Login with your assigned student --> student1 through student25
+- Login with your assigned student --> `student1` through `student25`
 - User [FNTS/PEZ Marketplace services](#fnts-or-pivotal-haas-environment) below
 
 ## Markplace information
