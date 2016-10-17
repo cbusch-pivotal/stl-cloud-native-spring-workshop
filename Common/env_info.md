@@ -14,6 +14,7 @@ Use the following marketplace services and plans per environment
 
 ### FNTS or Pivotal HaaS environment
 service | plans | description
+------- | ----- | -----------
 apigee-edge | org | Apigee Edge API Platform
 app-autoscaler | bronze, gold | Scales bound applications in response to load (beta)
 p-circuit-breaker-dashboard | standard | Circuit Breaker Dashboard for Spring Cloud Applications
@@ -27,6 +28,7 @@ p-service-registry | standard | Service Registry for Spring Cloud Applications
 
 ### Pivotal Web Server MarketPlace services and plans
 service | plans | description
+------- | ----- | -----------
 3scale | free_appdirect, basic_appdirect* | API Management Platform
 app-autoscaler | bronze, gold | Scales bound applications in response to load (beta)
 blazemeter | free-tier, basic1kmr*, pro5kmr* | Performance Testing Platform
