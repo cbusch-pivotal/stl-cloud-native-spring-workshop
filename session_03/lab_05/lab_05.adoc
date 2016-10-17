@@ -1,7 +1,5 @@
 = Lab 5 - Introspection, Monitoring, and Metrics using Spring Boot Actuator
 
-= 1) ADD SPRING TOOL SUITE INTO MIX
-= 2) CTRL-C to end a "java -jar" session
 
 == Set up the Actuator
 
