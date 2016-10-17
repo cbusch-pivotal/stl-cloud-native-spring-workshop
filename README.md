@@ -50,33 +50,33 @@ $ cd stl-cloud-native-spring-workshop/
 
 ## Course Materials
 
-#### _Session 1: Cloud Native Architectures & Frameworks_ [(Slides)](session_01/Session_01-Cloud_Native_Architectures_and_Frameworks.pptx)
+#### _Session 1: Cloud Native Architectures & Frameworks_ [(Slides)](session_01/Session_01-Cloud_Native_Architectures_and_Frameworks-2xpg.pdf)
 
-#### _Session 2: Pivotal Cloud Foundry Overview_ [(Slides)](session_02/Session_02-Pivotal_Cloud_Foundry-The_Cloud_Native_Platform.pptx)
+#### _Session 2: Pivotal Cloud Foundry Overview_ [(Slides)](session_02/Session_02-Pivotal_Cloud_Foundry-The_Cloud_Native_Platform-2xpg.pdf)
   - [Lab 1 - From Zero to Pushing Your First Application](session_02/lab_01/lab_01.adoc)
   - [Lab 2 - Binding to Cloud Foundry Services](session_02/lab_02/lab_02.adoc)
   - [Lab 3 - Scaling Applications](session_02/lab_03/lab_03.adoc)
   - [Lab 4 - Monitoring Applications](session_02/lab_04/lab_04.adoc)
 
-#### _Session 3: Spring Boot and Actuator_ [(Slides)](session_03/Session_03-Spring_Boot_and_Actuator.pptx)
+#### _Session 3: Spring Boot and Actuator_ [(Slides)](session_03/Session_03-Spring_Boot_and_Actuator-2xpg.pdf)
   - [Lab 5 - Introspection, Monitoring, and Metrics using Spring Boot Actuator](session_03/lab_05/lab_05.adoc)
 
-#### _Session 4: Spring Data on Cloud Foundry_ [(Slides)](session_04/Session_04-Spring_Data.pptx)
+#### _Session 4: Spring Data on Cloud Foundry_ [(Slides)](session_04/Session_04-Spring_Data-2xpg.pdf)
   - [Lab 6 - Build a Hypermedia-Driven RESTful Web Service with Spring Data REST](session_04/lab_06/lab_06.adoc)
   - [Lab 7 - Leveraging Spring Cloud Connectors for Service Binding](session_04/lab_07/lab_07.adoc)
 
-#### _Session 5: Spring Cloud Services on Cloud Foundry_ [(Slides)](session_05/Session_05-Spring-Cloud-Services.pptx)
+#### _Session 5: Spring Cloud Services on Cloud Foundry_ [(Slides)](session_05/Session_05-Spring-Cloud-Services-2xpg.pdf)
 _Extra credit - labs can be done on your own!_
   - [Lab 8 - Binding Spring Cloud Services](session_05/lab_08/lab_08.adoc)
   - [Lab 9 - Service Registry](session_05/lab_09/lab_09.adoc)
   - [Lab 10 - Config Server](session_05/lab_10/lab_10.adoc)
   - [Lab 11 - Circuit Breaker Dashboard](session_05/lab_11/lab_11.adoc)
 
-#### _Session 6: Route Services with Apigee_ [(Slides)](session_06/Session_06_Route_Services.pdf)
+#### _Session 6: Route Services with Apigee_ [(Slides)](session_06/Session_06-Route_Services_and_Apigee_Edge-2xpg.pdf)
   - [Lab 12 - PCF Route Service with Apigee](session_06/lab_12/lab_12.adoc)
   - [Lab 13 - Apigee DevJam](session_06/lab_13/lab_13.adoc)
 
-#### _Wrap-up, Q&A, Course evaluation_ [(Slides)](session_wrapup/Session_Wrap-up.pptx) [(Evaluation)](http://evaluation.lnk)
+#### _Wrap-up, Q&A, Course evaluation_ [(Slides)](session_wrapup/Session_Wrap-up-2xpg.pdf) [(Evaluation)](http://evaluation.lnk)
 
 ## Instructors
 - Chris Busch, Pivotal Platform Architect, cbusch@pivotal.io
