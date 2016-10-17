@@ -21,8 +21,7 @@ Use the following to log into specific environments
 - User [FNTS/PEZ Marketplace services](#fnts-or-pivotal-haas-environment) below
 
 ## Markplace information
-Use the following marketplace services and plans per environment
-Depending upon the PCF environment in which you are connected, the following Marketplace Services are made available. For instance, if you are instructed to create a new100mb MySQL service instance while using the PWS environment, then use the following:
+Depending upon the PCF environment in which you are connected, the following Marketplace Services and plans are available. For instance, if you are instructed to create a new100mb MySQL service instance while using the PWS environment, then use the following:
 
 ```
 $ cf create-service p-mysql 100mb mydb
