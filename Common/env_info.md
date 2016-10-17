@@ -22,8 +22,19 @@ Use the following to log into specific environments
 
 ## Markplace information
 Use the following marketplace services and plans per environment
+Depending upon the PCF environment in which you are connected, the following Marketplace Services are made available. For instance, if you are instructed to create a new100mb MySQL service instance while using the PWS environment, then use the following:
 
-### FNTS or Pivotal HaaS environment
+```
+$ cf create-service p-mysql 100mb mydb
+```
+
+Else for the FNTS or PEZ environments, use the following:
+
+```
+$ cf create-service p-mysql 100mb-dev mydb
+```
+
+### FNTS or PEZ environments
 Service Name | Plans | Description
 ------------ | ----- | -----------
 apigee-edge | org | Apigee Edge API Platform
