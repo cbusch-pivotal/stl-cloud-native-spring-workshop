@@ -31,12 +31,6 @@ Using the above information, your step to login are as follows below. When loggi
 $ cf login -a <endpoint> -u <user> --skip-ssl-validation
 ```
 
-So for PWS, use your email address from when you created your account.
-
-```
-$ cf login -a api.run.pivotal.io -u myname@email.com --skip-ssl-validation
-```
-
 Or for FNTS, use the student# you were assigned.
 
 ```
@@ -61,6 +55,13 @@ API endpoint:   https://api.system.pivotal.fnts.com (API version: 2.54.0)
 User:           student1
 Org:            student1-org
 Space:          development
+```
+
+So for PWS, use your email address from when you created your account.
+
+```
+$ cf login -a api.run.pivotal.io -u myname@email.com --skip-ssl-validation
+...
 ```
 
 ## Marketplace Information
