@@ -1,16 +1,16 @@
 :compat-mode:
 = Lab 7 - Leveraging Spring Cloud Connectors for Service Binding
 
-In this lab we'll bind our RESTful web service from link:../lab_05/lab_05.adoc[Lab 5] to a MySQL database and leverage Spring Cloud Connectors to easily connect to it.
+In this lab we'll bind our RESTful web service from link:../lab_04/lab_06.adoc[Lab 6] to a MySQL database and leverage Spring Cloud Connectors to easily connect to it.
 
-NOTE: The completed code for this lab can be found at `$COURSE_HOME/session_03/lab_06/complete/cities`.
+NOTE: The completed code for this lab can be found at `$COURSE_HOME/session_04/lab_07/complete/cities`.
 
 == Using Spring Cloud Connectors
 
 . Change to the lab directory (the initial state for this lab is the same as the completed state for link:../lab_05/lab_05.html[Lab 5], so you can choose to continue with that project if you like footnote:[However, please use the copy of `import.sql` found in the `lab_06/initial/cities/src/main/resources` directory. It is a subset of the original dataset, which is necessary because we are using a free tier database service.]):
 +
 ----
-$ cd $COURSE_HOME/session_03/lab_06/initial/cities
+$ cd $COURSE_HOME/session_04/lab_07/initial/cities
 ----
 
 . At present we're still using the in-memory database. Let's connect to a MySQL database service.
