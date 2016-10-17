@@ -46,7 +46,6 @@ Next, download the course materials.  This can be accomplished either through th
 ```
 $ git clone https://github.com/cbusch-pivotal/stl-cloud-native-spring-workshop
 $ cd stl-cloud-native-spring-workshop/
-$ git fetch --all
 ```
 
 ## Course Materials
