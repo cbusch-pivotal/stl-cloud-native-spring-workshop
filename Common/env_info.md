@@ -24,8 +24,8 @@ Use the following to log into specific environments
 Use the following marketplace services and plans per environment
 
 ### FNTS or Pivotal HaaS environment
-service | plans | description
-------- | ----- | -----------
+Service Name | Plans | Description
+------------ | ----- | -----------
 apigee-edge | org | Apigee Edge API Platform
 app-autoscaler | bronze, gold | Scales bound applications in response to load (beta)
 p-circuit-breaker-dashboard | standard | Circuit Breaker Dashboard for Spring Cloud Applications
