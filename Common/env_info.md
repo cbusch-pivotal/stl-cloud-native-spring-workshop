@@ -36,14 +36,11 @@ p-redis | shared-vm, dedicated-vm | Redis service to provide a key-value store
 p-service-registry | standard | Service Registry for Spring Cloud Applications
 
 ### Pivotal Web Server MarketPlace services and plans
-service | plans | description
-------- | ----- | -----------
+Service Name | Plans | Description
+------------ | ----- | -----------
 app-autoscaler | bronze, gold | Scales bound applications in response to load (beta)
 cleardb | spark, boost*, amp*, shock* | Highly available MySQL for your Apps.
 cloudamqp | lemur, tiger*, bunny*, rabbit*, panda* | Managed HA RabbitMQ servers in the cloud
-elephantsql | turtle, panda*, hippo*, elephant* | PostgreSQL as a Service
-memcachedcloud | 100mb*, 250mb*, 500mb*, 1gb*, 2-5gb*, 5gb*, 30mb | Enterprise-Class Memcached for Developers
-newrelic | standard | Manage and monitor your apps
 p-circuit-breaker-dashboard | standard | Circuit Breaker Dashboard for Spring Cloud Applications
 p-config-server | standard | Config Server for Spring Cloud Applications
 p-mysql | 100mb, 1gb, 20gb | MySQL databases on demand
