@@ -1,7 +1,7 @@
 :compat-mode:
 = Lab 7 - Leveraging Spring Cloud Connectors for Service Binding
 
-In this lab we'll bind our RESTful web service from link:../lab_04/lab_06.adoc[Lab 6] to a MySQL database and leverage Spring Cloud Connectors to easily connect to it.
+In this lab we'll bind our RESTful web service from link:../lab_06/lab_06.adoc[Lab 6] to a MySQL database and leverage Spring Cloud Connectors to easily connect to it.
 
 NOTE: The completed code for this lab can be found at `$COURSE_HOME/session_04/lab_07/complete/cities`.
 
