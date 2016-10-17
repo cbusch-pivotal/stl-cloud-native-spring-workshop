@@ -24,7 +24,7 @@ _*See [Course Materials](#course-materials) section below for slides and labs_
 
 This is a _loose_ schedule for the day. We will adjust as necessary based on our pace through the material.
 
-The lectures for this class are intentionally very light and are only intended to set the stage for the hands-on labs.
+The lectures for this workshop are generally light and are only intended to set the stage for the hands-on labs.
 The overwhelming majority of our time will be spent engaging with the technology directly!
 
 ## Getting started
