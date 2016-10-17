@@ -58,7 +58,7 @@ $ cd stl-cloud-native-spring-workshop/
   - [Lab 3 - Scaling Applications](session_02/lab_03/lab_03.adoc)
   - [Lab 4 - Monitoring Applications](session_02/lab_04/lab_04.adoc)
 
-#### _Session 3: Spring Boot and Actuator_ [(Slides)](session_03/Session_03-Spring_Boot_and_Actuator-2xpg.pdf)
+#### _Session 3: Spring Boot and Actuator_ [(Slides)](session_03/Session_03-Spring Boot_Actuator-2xpg.pdf)
   - [Lab 5 - Introspection, Monitoring, and Metrics using Spring Boot Actuator](session_03/lab_05/lab_05.adoc)
 
 #### _Session 4: Spring Data on Cloud Foundry_ [(Slides)](session_04/Session_04-Spring_Data-2xpg.pdf)
