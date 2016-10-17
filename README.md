@@ -48,6 +48,10 @@ $ git clone https://github.com/cbusch-pivotal/stl-cloud-native-spring-workshop
 $ cd stl-cloud-native-spring-workshop/
 ```
 
+**PCF Environments**
+
+Finally, in order to perform the labs, you must be connected or logged into a live PCF environment. Initially you were asked to create a Pivotal Web Services (PWS) account for use in labs and afterwards. Two other environments have also been made available for use. Please see the [Pivotal Cloud Foundry Environment document](Common/env_info.md) for details. You should have been assigned a student number and PCF instance at registration. Otherwise the instructors will provide that information for your use.
+
 ## Course Materials
 
 #### _Session 1: Cloud Native Architectures & Frameworks_ [(Slides)](session_01/Session_01-Cloud_Native_Architectures_and_Frameworks-2xpg.pdf)
