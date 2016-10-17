@@ -1,24 +1,44 @@
 # Pivotal Cloud Foundry Environments
 
-## Environment information
-Use the following to log into specific environments
-
 ## PCF Environment Information
+Use the following information to connect (login) to specific environments as directed by the instructor.
 
 ### Pivotal Web Services (PWS)
-- http://run.pivotal.io
+- Website: http://run.pivotal.io
+- Endpoint: api.run.pivotal.io
 - Login with personal information or create an account
 - Use [PWS Marketplace services](#pws-marketplace-services-and-plans) below
 
 ### Partner First National Technology Solutions (FNTS)
-- https://apps.system.pivotal.fnts.com
+- Website: https://apps.system.pivotal.fnts.com
+- Endpoint: api.system.pivotal.fnts.com
 - Login with your assigned student --> `student1` through `student25`
 - User [FNTS/PEZ Marketplace services](#fnts-or-pez-marketplace-services-and-plans) below
 
 ### Pivotal Elastic Zone (PEZ)
-- https://apps.run.haas-64.pez.pivotal.io
+- Website: https://apps.run.haas-64.pez.pivotal.io
+- Endpoint: api.run.haas-64.pez.pivotal.io
 - Login with your assigned student --> `student1` through `student25`
 - User [FNTS/PEZ Marketplace services](#fnts-or-pez-marketplace-services-and-plans) below
+
+## Logging into an Environment
+Using the above information, your step to login are as follows below. When logging in, PCF will ask you for your password and which PCF Space, i.e. development, test, or production, in which you would like to work. Spaces can always be changed later using `cf target -s test`, for instance.
+
+```
+$ cf login -a <endpoint> -u <user> --skip-ssl-validation
+```
+
+So for PWS, use your email address from when you created your account.
+
+```
+$ cf login -a api.run.pivotal.io -u myname@email.com --skip-ssl-validation
+```
+
+Or for FNTS, use the student# you were assigned.
+
+```
+$ cf login -a api.system.pivotal.fnts.com -u student1 --skip-ssl-validation
+```
 
 ## Markplace Information
 Depending upon the PCF environment in which you are connected, the following Marketplace Services and Plans are available. For instance, if you are instructed to create a new 100mb MySQL service instance while using the PWS environment, then use the following:
