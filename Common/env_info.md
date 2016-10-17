@@ -1,6 +1,6 @@
 # Pivotal Cloud Foundry Environments
 
-_Contents_
+**Contents**
 - [PCF Environments](#pcf-environment-information)
 - [Logging into an environment](#logging-into-an-environment)
 - [Marketplace information](#marketplace-information)
