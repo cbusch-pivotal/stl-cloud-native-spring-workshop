@@ -19,7 +19,7 @@ Take a look at the events that have transpired so far for our deployment of `cf-
 ====
 ----
 $ cf events cf-scale-boot
-Getting events for app cf-scale-boot in org oreilly-class / space instructor as mstine@pivotal.io...
+Getting events for app cf-scale-boot in org oreilly-class / space instructor as cbusch@pivotal.io...
 
 time                          event                 actor               description
 2015-02-13T15:18:33.00-0600   audit.app.update      mstine@pivotal.io   instances: 1 <6>
@@ -42,7 +42,7 @@ Here we see the `app.create` event, which created our application's record and s
 +
 ----
 $ cf stop cf-scale-boot
-Stopping app cf-scale-boot in org oreilly-class / space instructor as mstine@pivotal.io...
+Stopping app cf-scale-boot in org oreilly-class / space instructor as cbusch@pivotal.io...
 OK
 ----
 
@@ -50,7 +50,7 @@ OK
 +
 ----
 $ cf events cf-scale-boot
-Getting events for app cf-scale-boot in org oreilly-class / space instructor as mstine@pivotal.io...
+Getting events for app cf-scale-boot in org oreilly-class / space instructor as cbusch@pivotal.io...
 
 time                          event                 actor               description
 2015-02-13T15:59:10.00-0600   audit.app.update      mstine@pivotal.io   state: STOPPED
@@ -66,7 +66,7 @@ time                          event                 actor               descript
 +
 ----
 $ cf start cf-scale-boot
-Starting app cf-scale-boot in org oreilly-class / space instructor as mstine@pivotal.io...
+Starting app cf-scale-boot in org oreilly-class / space instructor as cbusch@pivotal.io...
 
 0 of 1 instances running, 1 starting
 0 of 1 instances running, 1 starting
@@ -81,7 +81,7 @@ OK
 
 App cf-scale-boot was started using this command `JAVA_HOME=$PWD/.java-buildpack/open_jdk_jre JAVA_OPTS="-Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh -Xmx382293K -Xms382293K -XX:MaxMetaspaceSize=64M -XX:MetaspaceSize=64M -Xss995K" SERVER_PORT=$PORT $PWD/.java-buildpack/spring_boot_cli/bin/spring run app.groovy`
 
-Showing health and status for app cf-scale-boot in org oreilly-class / space instructor as mstine@pivotal.io...
+Showing health and status for app cf-scale-boot in org oreilly-class / space instructor as cbusch@pivotal.io...
 OK
 
 requested state: started
@@ -98,7 +98,7 @@ last uploaded: Fri Feb 13 18:56:29 UTC 2015
 +
 ----
 $ cf events cf-scale-boot
-Getting events for app cf-scale-boot in org oreilly-class / space instructor as mstine@pivotal.io...
+Getting events for app cf-scale-boot in org oreilly-class / space instructor as cbusch@pivotal.io...
 
 time                          event                 actor               description
 2015-02-13T16:01:28.00-0600   audit.app.update      mstine@pivotal.io   state: STARTED
@@ -197,7 +197,7 @@ image::../../Common/images/papertrail_4.png[]
 +
 ----
 $ cf cups cf-scale-boot-logs -l syslog://logs2.papertrailapp.com:43882
-Creating user provided service cf-scale-boot-logs in org oreilly-class / space instructor as mstine@pivotal.io...
+Creating user provided service cf-scale-boot-logs in org oreilly-class / space instructor as cbusch@pivotal.io...
 OK
 ----
 
@@ -205,7 +205,7 @@ OK
 +
 ----
 $ cf bs cf-scale-boot cf-scale-boot-logs
-Binding service cf-scale-boot-logs to app cf-scale-boot in org oreilly-class / space instructor as mstine@pivotal.io...
+Binding service cf-scale-boot-logs to app cf-scale-boot in org oreilly-class / space instructor as cbusch@pivotal.io...
 OK
 TIP: Use 'cf restage' to ensure your env variable changes take effect
 ----
@@ -265,7 +265,7 @@ Also, if you're paying attention to the log tail, you'll see some interesting lo
 +
 ----
 $ cf events cf-scale-boot
-Getting events for app cf-scale-boot in org oreilly-class / space instructor as mstine@pivotal.io...
+Getting events for app cf-scale-boot in org oreilly-class / space instructor as cbusch@pivotal.io...
 
 time                          event                 actor               description
 2015-02-13T17:17:57.00-0600   app.crash             cf-scale-boot       index: 0, reason: CRASHED, exit_description: app instance exited, exit_status: 1
@@ -303,7 +303,7 @@ Because of the limited quota we have for this course, let's clean up our applica
 $ cf d cf-scale-boot
 
 Really delete the app cf-scale-boot?> y
-Deleting app cf-scale-boot in org oreilly-class / space instructor as mstine@pivotal.io...
+Deleting app cf-scale-boot in org oreilly-class / space instructor as cbusch@pivotal.io...
 'OK
 ----
 
