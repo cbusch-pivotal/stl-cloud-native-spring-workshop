@@ -82,7 +82,7 @@ _Extra credit - labs can be done on your own!_
   - [Lab 12 - PCF Route Service with Apigee](session_06/lab_12/lab_12.adoc)
   - [Lab 13 - Apigee DevJam](session_06/lab_13/lab_13.adoc)
 
-#### _Wrap-up, Q&A, Course evaluation_ [(Slides)](session_wrapup/Session_Wrap-up-2xpg.pdf) [(Evaluation)](http://evaluation.lnk)
+#### _Wrap-up, Q&A, Course evaluation_ [(Slides)](session_wrapup/Session_Wrap-up-2xpg.pdf) [(Evaluation)](https://goo.gl/forms/aD5y2Rlhn99CZUaA2)
 
 ## Instructors
 - Chris Busch, Pivotal Platform Architect, cbusch@pivotal.io
