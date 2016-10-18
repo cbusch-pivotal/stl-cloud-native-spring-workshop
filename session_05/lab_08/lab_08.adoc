@@ -5,27 +5,6 @@
 --
 
 --
-== Using Pivotal's PCF3 cloud foundry instance
-. If you were using http://run.pivotal.io (Pivotal Web Services (PWS) public cloud) in prior labs, then you will need to switch to a PCF instance with the Spring Cloud Services (Config Server, Service Registry, and Circuit Breaker) installed. 
-
-. PCF3 does have these service available for use in this workshop. Labs 8 - 11 require Spring Cloud Services. In the PCF3 environment, several studentX accounts are available for use. Please see the instructor for your student number assignment before continuing.
-
-. From a command prompt, set the API target for the CLI:
-+
-----
-$ cf api --skip-ssl-validation https://api.pcf3.cloud.fe.pivotal.io
-----
-
-. Login to Pivotal Cloud Foundry (use information from your instructor to log on to Pivotal Cloud Foundry):
-+
-----
-$ cf login -u student<assigned number> -p password
-----
-+
-Follow the prompts, choosing default organization and space.
-
-
-
 == Creating Service Instances for Hello World Spring Cloud Services Demo Application
 > Each of these services takes a few minutes to initialize while creating application instances and other resources to support them. With many students performing the same actions on PCF3 at the same time, please be patient while initialization completes.
 
