@@ -126,6 +126,8 @@ endpoints:
 . Create the class `io.pivotal.spring.hello.FlappingHealthIndicator` and into it paste the following code:
 +
 ----
+package io.pivotal.spring.hello;
+
 import java.util.Random;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
@@ -188,6 +190,8 @@ It also allows for the creation of custom metrics.
 . Create the class `io.pivotal.spring.hello.GreetingService` and into it paste the following code:
 +
 ----
+package io.pivotal.spring.hello;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.actuate.metrics.CounterService;
