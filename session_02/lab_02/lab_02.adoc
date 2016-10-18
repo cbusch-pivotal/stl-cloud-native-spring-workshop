@@ -57,6 +57,7 @@ OK
 ----
 +
 Or, if you are using FNTS or PEZ (link:/Common/env_info.md[see Environments]):
++
 ----
 $ cf create-service p-mysql 100mb-dev spring-music-db
 ...
