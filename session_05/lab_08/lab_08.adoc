@@ -156,14 +156,14 @@ OK
 +
 ----
 $cf api
-API endpoint: https://api.cfapps.io (API version: 2.43.0)
+API endpoint: https://api.run.pivotal.io (API version: 2.43.0)
 ----
 
 . Enable Spring Cloud Services to add the certificate automatically by setting the CF_TARGET environment variable on the hello-server and hello-ui applications to the API endpoint of your Elastic Runtime instance. First do this for the hello-server application.
 +
 ----
-$cf set-env hello-server CF_TARGET https://api.cfapps.io
-Setting env variable 'CF_TARGET' to 'https://api.cfapps.io' for app hello-server in org instructor-org / space development as instructor...
+$cf set-env hello-server CF_TARGET https://api.run.pivotal.io
+Setting env variable 'CF_TARGET' to 'https://api.run.pivotal.io' for app hello-server in org instructor-org / space development as instructor...
 OK
 TIP: Use 'cf restage' to ensure your env variable changes take effect
 ----
@@ -171,8 +171,8 @@ TIP: Use 'cf restage' to ensure your env variable changes take effect
 . Then repeat for the hello-ui application
 +
 ----
-$cf set-env hello-ui CF_TARGET https://api.cfapps.io
-Setting env variable 'CF_TARGET' to 'https://api.cfapps.io' for app hello-ui in org instructor-org / space development as instructor...
+$cf set-env hello-ui CF_TARGET https://api.run.pivotal.io
+Setting env variable 'CF_TARGET' to 'https://api.run.pivotal.io' for app hello-ui in org instructor-org / space development as instructor...
 OK
 TIP: Use 'cf restage' to ensure your env variable changes take effect
 ----
