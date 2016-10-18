@@ -52,15 +52,21 @@ From the CLI, let's _create_ a developer instance:
 +
 ----
 $ cf create-service cleardb spark spring-music-db
-Creating service spring-music-db in org oreilly-class / space instructor as mstine@pivotal.io...
+Creating service spring-music-db in org oreilly-class / space instructor as cbusch@pivotal.io...
 OK
+----
++
+Or, if you are using FNTS or PEZ (link:/Common/env_info.md[see Environments]):
+----
+$ cf create-service p-mysql 100mb-dev spring-music-db
+...
 ----
 
 . Next we'll _bind_ the newly created instance to our `spring-music` application:
 +
 ----
 $ cf bind-service spring-music spring-music-db
-Binding service spring-music-db to app spring-music in org oreilly-class / space instructor as mstine@pivotal.io...
+Binding service spring-music-db to app spring-music in org oreilly-class / space instructor as cbusch@pivotal.io...
 OK
 TIP: Use 'cf restage' to ensure your env variable changes take effect
 ----
@@ -137,7 +143,7 @@ Since we're done using the spring-music application, let's clean up our applicat
 $ cf delete spring-music
 
 Really delete the app spring-music?> y
-Deleting app spring-music in org oreilly-class / space instructor as mstine@pivotal.io...
+Deleting app spring-music in org oreilly-class / space instructor as cbusch@pivotal.io...
 OK
 ----
 . Delete the `spring-music-db` service:
@@ -146,7 +152,7 @@ OK
 $ cf delete-service spring-music-db
 
 Really delete the service spring-music-db?> y
-Deleting service spring-music-db in org oreilly-class / space instructor as mstine@pivotal.io...
+Deleting service spring-music-db in org oreilly-class / space instructor as cbusch@pivotal.io...
 OK
 ----
 
