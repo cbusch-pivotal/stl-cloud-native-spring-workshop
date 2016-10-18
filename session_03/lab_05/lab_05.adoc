@@ -63,7 +63,7 @@ It will add Git branch and commit coordinates to the `/info` endpoint:
 </plugin>
 ----
 +
-NOTE: The path `../../../../.git` refers to the `.git` directory at the root of the course materials.
+*NOTE: The path `../../../../.git` refers to the `.git` directory at the root of the course materials.*
 
 . Add the following properties to `src/main/resources/application.yml` after the `greeting: Hello` line:
 +
