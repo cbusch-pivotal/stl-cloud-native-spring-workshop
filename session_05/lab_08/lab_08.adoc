@@ -109,19 +109,19 @@ $./mvnw package
 +
 ----
 $cf push --no-start
-Using manifest file /Users/cbusch/git/SpringCloudWorkshop/session_05/lab_08/hello-world/manifest.yml
+Using manifest file /Users/cbusch/git/stl-cloud-native-spring-workshop/session_05/lab_08/hello-world/manifest.yml
 
 Creating app hello-server in org instructor-org / space development as instructor...
 OK
 
-Creating route hello-server-unstipulated-enrober.pcf3.cloud.fe.pivotal.io...
+Creating route hello-server-unstipulated-enrober.cfapps.io...
 OK
 
-Binding hello-server-unstipulated-enrober.pcf3.cloud.fe.pivotal.io to hello-server...
+Binding hello-server-unstipulated-enrober.cfapps.io to hello-server...
 OK
 
 Uploading hello-server...
-Uploading app files from: /Users/cbusch/git/SpringCloudWorkshop/session_05/lab_08/hello-world/hello-server/target/hello-server-0.0.1-SNAPSHOT.jar
+Uploading app files from: /Users/cbusch/git/stl-cloud-native-spring-workshop/session_05/lab_08/hello-world/hello-server/target/hello-server-0.0.1-SNAPSHOT.jar
 Uploading 1M, 116 files
 Done uploading
 OK
@@ -133,14 +133,14 @@ OK
 Creating app hello-ui in org instructor-org / space development as instructor...
 OK
 
-Creating route hello-ui-unsubscribed-teacake.pcf3.cloud.fe.pivotal.io...
+Creating route hello-ui-unsubscribed-teacake.cfapps.io...
 OK
 
-Binding hello-ui-unsubscribed-teacake.pcf3.cloud.fe.pivotal.io to hello-ui...
+Binding hello-ui-unsubscribed-teacake.cfapps.io to hello-ui...
 OK
 
 Uploading hello-ui...
-Uploading app files from: /Users/cbusch/git/SpringCloudWorkshop/session_05/lab_08/hello-world/hello-ui/target/hello-ui-0.0.1-SNAPSHOT.jar
+Uploading app files from: /Users/cbusch/git/stl-cloud-native-spring-workshop/session_05/lab_08/hello-world/hello-ui/target/hello-ui-0.0.1-SNAPSHOT.jar
 Uploading 1.2M, 130 files
 Done uploading
 OK
@@ -156,14 +156,14 @@ OK
 +
 ----
 $cf api
-API endpoint: https://api.pcf3.cloud.fe.pivotal.io (API version: 2.43.0)
+API endpoint: https://api.cfapps.io (API version: 2.43.0)
 ----
 
 . Enable Spring Cloud Services to add the certificate automatically by setting the CF_TARGET environment variable on the hello-server and hello-ui applications to the API endpoint of your Elastic Runtime instance. First do this for the hello-server application.
 +
 ----
-$cf set-env hello-server CF_TARGET https://api.pcf3.cloud.fe.pivotal.io
-Setting env variable 'CF_TARGET' to 'https://api.pcf3.cloud.fe.pivotal.io' for app hello-server in org instructor-org / space development as instructor...
+$cf set-env hello-server CF_TARGET https://api.cfapps.io
+Setting env variable 'CF_TARGET' to 'https://api.cfapps.io' for app hello-server in org instructor-org / space development as instructor...
 OK
 TIP: Use 'cf restage' to ensure your env variable changes take effect
 ----
@@ -171,8 +171,8 @@ TIP: Use 'cf restage' to ensure your env variable changes take effect
 . Then repeat for the hello-ui application
 +
 ----
-$cf set-env hello-ui CF_TARGET https://api.pcf3.cloud.fe.pivotal.io
-Setting env variable 'CF_TARGET' to 'https://api.pcf3.cloud.fe.pivotal.io' for app hello-ui in org instructor-org / space development as instructor...
+$cf set-env hello-ui CF_TARGET https://api.cfapps.io
+Setting env variable 'CF_TARGET' to 'https://api.cfapps.io' for app hello-ui in org instructor-org / space development as instructor...
 OK
 TIP: Use 'cf restage' to ensure your env variable changes take effect
 ----
@@ -238,7 +238,7 @@ OK
 requested state: started
 instances: 1/1
 usage: 1G x 1 instances
-urls: hello-server-unstipulated-enrober.pcf3.cloud.fe.pivotal.io
+urls: hello-server-unstipulated-enrober.cfapps.io
 last uploaded: Wed Dec 9 15:47:21 UTC 2015
 stack: cflinuxfs2
 buildpack: java-buildpack=v3.3.1-offline-https://github.com/cloudfoundry/java-buildpack.git#063836b java-main open-jdk-like-jre=1.8.0_65 open-jdk-like-memory-calculator=2.0.0_RELEASE spring-auto-reconfiguration=1.10.0_RELEASE
@@ -310,7 +310,7 @@ OK
 requested state: started
 instances: 1/1
 usage: 1G x 1 instances
-urls: hello-ui-unsubscribed-teacake.pcf3.cloud.fe.pivotal.io
+urls: hello-ui-unsubscribed-teacake.cfapps.io
 last uploaded: Wed Dec 9 15:47:34 UTC 2015
 stack: cflinuxfs2
 buildpack: java-buildpack=v3.3.1-offline-https://github.com/cloudfoundry/java-buildpack.git#063836b java-main open-jdk-like-jre=1.8.0_65 open-jdk-like-memory-calculator=2.0.0_RELEASE spring-auto-reconfiguration=1.10.0_RELEASE
